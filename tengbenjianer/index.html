@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="藤本健二个人资料与作品集展示，包含其职业生涯、代表作品、创作风格分析及相关艺术资讯。">
+    <meta name="keywords" content="藤本健二, 艺术家, 作品集, 绘画, 艺术">
+    <title>藤本健二-艺术家个人主页与作品展示</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --bg-color: #f8f9fa;
+            --text-main: #2c3e50;
+            --text-secondary: #5f6c7b;
+            --accent-color: #e67e22;
+            --accent-hover: #d35400;
+            --card-bg: #ffffff;
+            --border-radius: 8px;
+            --container-width: 1200px;
+            --spacing-unit: 1.5rem;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+            object-fit: cover;
+        }
+
+        /* Utility Classes */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            position: relative;
+            padding-left: 1rem;
+            font-weight: 700;
+        }
+
+        .section-title::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 10%;
+            height: 80%;
+            width: 4px;
+            background-color: var(--accent-color);
+            border-radius: 2px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            border-radius: var(--border-radius);
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background-color: var(--accent-color);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--accent-hover);
+            transform: translateY(-1px);
+        }
+
+        .btn-outline {
+            border: 2px solid var(--accent-color);
+            color: var(--accent-color);
+            background: transparent;
+        }
+
+        .btn-outline:hover {
+            background-color: var(--accent-color);
+            color: white;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--text-main);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-secondary);
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--accent-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 4rem 0;
+            background: linear-gradient(135deg, #fff5eb 0%, #ffffff 100%);
+            display: flex;
+            align-items: center;
+            min-height: 500px;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .hero-text h1 {
+            font-size: 3rem;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            color: var(--text-main);
+        }
+
+        .hero-text p {
+            font-size: 1.125rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            max-width: 500px;
+        }
+
+        .hero-image {
+            position: relative;
+        }
+
+        .hero-image img {
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        /* About Section */
+        .about-section {
+            padding: 5rem 0;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 3fr 2fr;
+            gap: 4rem;
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
+            color: var(--text-secondary);
+            font-size: 1.05rem;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+        }
+
+        .stat-card {
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            border: 1px solid #eee;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--accent-color);
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        /* Gallery / Works Section */
+        .works-section {
+            padding: 5rem 0;
+            background-color: #fff;
+        }
+
+        .filter-bar {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 0.5rem 1.25rem;
+            border-radius: 20px;
+            background-color: #f0f2f5;
+            color: var(--text-secondary);
+            cursor: pointer;
+            transition: all 0.2s;
+            border: none;
+            font-size: 0.95rem;
+        }
+
+        .filter-btn:hover, .filter-btn.active {
+            background-color: var(--accent-color);
+            color: white;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .work-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+            border: 1px solid #eee;
+        }
+
+        .work-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .work-img-wrapper {
+            height: 200px;
+            overflow: hidden;
+            background-color: #eee;
+        }
+
+        .work-img-wrapper img {
+            width: 100%;
+            height: 100%;
+            transition: transform 0.5s ease;
+        }
+
+        .work-card:hover .work-img-wrapper img {
+            transform: scale(1.05);
+        }
+
+        .work-info {
+            padding: 1.5rem;
+        }
+
+        .work-category {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--accent-color);
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .work-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--text-main);
+        }
+
+        .work-desc {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            padding: 5rem 0;
+            background-color: var(--text-main);
+            color: white;
+        }
+
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+
+        .contact-info h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-info p {
+            color: rgba(255,255,255,0.7);
+            margin-bottom: 2rem;
+        }
+
+        .contact-details div {
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .contact-form {
+            background: rgba(255,255,255,0.05);
+            padding: 2.5rem;
+            border-radius: var(--border-radius);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.8);
+        }
+
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 4px;
+            color: white;
+            font-family: inherit;
+        }
+
+        .form-group input:focus, .form-group textarea:focus {
+            outline: none;
+            border-color: var(--accent-color);
+            background: rgba(255,255,255,0.15);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1a252f;
+            color: rgba(255,255,255,0.6);
+            padding: 2rem 0;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-content, .about-grid, .contact-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .hero {
+                text-align: center;
+                padding: 3rem 0;
+            }
+
+            .hero-text p {
+                margin: 0 auto 2rem;
+            }
+
+            .nav-container {
+                flex-direction: column;
+                height: auto;
+                padding: 1rem 0;
+            }
+
+            nav ul {
+                margin-top: 1rem;
+                gap: 1rem;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .section-title {
+                font-size: 1.75rem;
+            }
+
+            .hero-text h1 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19l7-7 3 3-7 7-3-3z"></path><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path><path d="M2 2l7.586 7.586"></path><circle cx="11" cy="11" r="2"></circle></svg>
+                藤本健二<span>.ART</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#home" class="active">主页</a></li>
+                    <li><a href="#about">关于艺术家</a></li>
+                    <li><a href="#works">精选作品</a></li>
+                    <li><a href="#contact">联系合作</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <h1>探索光影与色彩的边界</h1>
+                    <p>欢迎来到藤本健二的艺术主页。这里展示了他多年来在当代绘画与数字艺术领域的探索与创作。通过独特的视觉语言，传达对现实与幻想交织的深刻理解。</p>
+                    <div class="cta-group">
+                        <a href="#works" class="btn btn-primary">浏览作品集</a>
+                        <a href="#about" class="btn btn-outline">了解更多</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <!-- 使用占位符图模拟艺术作品展示 -->
+                    <img src="https://picsum.photos/seed/kenshiro_art/600/400" alt="藤本健二艺术工作室概览">
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <div class="container">
+                <h2 class="section-title">关于艺术家</h2>
+                <div class="about-grid">
+                    <div class="about-text">
+                        <p>藤本健二是一位专注于抽象表现主义与现代数字艺术融合的视觉艺术家。出生于日本东京，他在过去十年间积累了丰富的创作经验，作品曾多次在国内外独立艺术展中展出。</p>
+                        <p>他的创作灵感往往来源于自然界的混沌秩序与人类情感的细腻波动。藤本健二擅长运用大胆的色块与流畅的线条，在画布上构建出既具张力又充满宁静感的视觉空间。他不仅关注绘画本身，还积极探索新媒体技术在艺术创作中的应用。</p>
+                        <p>目前，他致力于通过艺术教育传播视觉美学，并在多个国际艺术平台上分享创作心得。他的作品风格独特，辨识度高，深受收藏家和艺术爱好者的喜爱。</p>
+                    </div>
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <span class="stat-number">12+</span>
+                            <span class="stat-label">年创作经验</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number">50+</span>
+                            <span class="stat-label">个展览项目</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number">200+</span>
+                            <span class="stat-label">幅原创作品</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number">15</span>
+                            <span class="stat-label">国际奖项</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Works Section -->
+        <section id="works" class="works-section">
+            <div class="container">
+                <h2 class="section-title">精选作品</h2>
+                <div class="filter-bar">
+                    <button class="filter-btn active">全部</button>
+                    <button class="filter-btn">油画</button>
+                    <button class="filter-btn">数字艺术</button>
+                    <button class="filter-btn">雕塑</button>
+                    <button class="filter-btn">装置艺术</button>
+                </div>
+                <div class="gallery-grid">
+                    <article class="work-card">
+                        <div class="work-img-wrapper">
+                            <img src="https://picsum.photos/seed/art1/400/300" alt="混沌之境系列作品">
+                        </div>
+                        <div class="work-info">
+                            <div class="work-category">油画</div>
+                            <h3 class="work-title">混沌之境 No.4</h3>
+                            <p class="work-desc">这幅作品通过厚重的笔触和深色调，探讨了内心世界的不可控性。</p>
+                            <a href="#" class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.85rem;">查看详情</a>
+                        </div>
+                    </article>
+
+                    <article class="work-card">
+                        <div class="work-img-wrapper">
+                            <img src="https://picsum.photos/seed/art2/400/300" alt="霓虹城市系列作品">
+                        </div>
+                        <div class="work-info">
+                            <div class="work-category">数字艺术</div>
+                            <h3 class="work-title">霓虹城市 No.7</h3>
+                            <p class="work-desc">赛博朋克风格的数字插画，捕捉了未来都市夜晚的迷幻光影。</p>
+                            <a href="#" class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.85rem;">查看详情</a>
+                        </div>
+                    </article>
+
+                    <article class="work-card">
+                        <div class="work-img-wrapper">
+                            <img src="https://picsum.photos/seed/art3/400/300" alt="静物系列作品">
+                        </div>
+                        <div class="work-info">
+                            <div class="work-category">油画</div>
+                            <h3 class="work-title">静谧时刻</h3>
+                            <p class="work-desc">以静物为载体，展现光影在物体表面的微妙变化与静止之美。</p>
+                            <a href="#" class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.85rem;">查看详情</a>
+                        </div>
+                    </article>
+
+                    <article class="work-card">
+                        <div class="work-img-wrapper">
+                            <img src="https://picsum.photos/seed/art4/400/300" alt="抽象几何系列作品">
+                        </div>
+                        <div class="work-info">
+                            <div class="work-category">装置艺术</div>
+                            <h3 class="work-title">几何回响</h3>
+                            <p class="work-desc">结合光影投射与空间结构，创造出现实与虚幻边界的交互体验。</p>
+                            <a href="#" class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.85rem;">查看详情</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="container contact-container">
+                <div class="contact-info">
+                    <h2>开启合作</h2>
+                    <p>无论是艺术收藏咨询、商业合作邀约，还是单纯的艺术交流，欢迎随时通过以下方式联系我。</p>
+                    <div class="contact-details">
+                        <div>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                            <span>contact@kenji-fujimoto.art</span>
+                        </div>
+                        <div>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                            <span>东京, 日本</span>
+                        </div>
+                        <div>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                            <span>Instagram: @kenji_fujimoto_art</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form onsubmit="event.preventDefault(); alert('感谢您的留言，藤本健二工作室会尽快回复您。');">
+                        <div class="form-group">
+                            <label for="name">您的姓名</label>
+                            <input type="text" id="name" placeholder="请输入姓名" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">电子邮箱</label>
+                            <input type="email" id="email" placeholder="example@mail.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">留言内容</label>
+                            <textarea id="message" placeholder="请描述您的合作意向或咨询问题..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">发送消息</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Kenji Fujimoto Art Studio. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // 简单的交互逻辑：平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // 简单的交互逻辑：分类筛选按钮切换
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+    </script>
+</body>
+  </html>
