@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="17网首页 - 提供最新、最全的网络小说、漫画、动漫资讯及在线阅读平台。涵盖玄幻、言情、科幻、历史等多种题材，热门连载作品实时更新。">
+    <meta name="keywords" content="17网首页,网络小说,在线阅读,漫画,动漫资讯">
+    <title>17网首页 - 热门小说连载与漫画阅读平台</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #3b82f6;
+            --primary-hover: #2563eb;
+            --secondary-color: #f3f4f6;
+            --text-main: #1f2937;
+            --text-secondary: #6b7280;
+            --bg-body: #f9fafb;
+            --bg-card: #ffffff;
+            --border-color: #e5e7eb;
+            --spacing-unit: 8px;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Utility */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        .flex {
+            display: flex;
+        }
+
+        .flex-between {
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .flex-center {
+            justify-content: center;
+            align-items: center;
+        }
+
+        .grid {
+            display: grid;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            position: relative;
+            padding-left: 1rem;
+        }
+
+        .section-title::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background-color: var(--primary-color);
+            border-radius: 2px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-hover);
+        }
+
+        .btn-outline {
+            border: 1px solid var(--border-color);
+            background-color: white;
+            color: var(--text-main);
+        }
+
+        .btn-outline:hover {
+            border-color: var(--primary-color);
+            color: var(--primary-color);
+        }
+
+        /* Header */
+        header {
+            background-color: var(--bg-card);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+
+        .header-inner {
+            height: 64px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            letter-spacing: -0.5px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            color: var(--text-main);
+            padding: 1.5rem 0;
+            display: block;
+            position: relative;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--primary-color);
+        }
+
+        .nav-links a.active::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background-color: var(--primary-color);
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .search-box {
+            position: relative;
+        }
+
+        .search-input {
+            padding: 0.5rem 1rem 0.5rem 2.2rem;
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            width: 200px;
+            transition: width 0.3s;
+        }
+
+        .search-input:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            width: 240px;
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 0.8rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-secondary);
+            width: 16px;
+            height: 16px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #eff6ff 0%, #ffffff 100%);
+            padding: 3rem 0;
+            margin-bottom: 2rem;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .hero-text h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+            color: var(--text-main);
+        }
+
+        .hero-text p {
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+
+        .hero-tags {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-bottom: 1.5rem;
+        }
+
+        .tag {
+            background-color: rgba(59, 130, 246, 0.1);
+            color: var(--primary-color);
+            padding: 0.25rem 0.75rem;
+            border-radius: 99px;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+
+        .hero-image-placeholder {
+            width: 100%;
+            height: 350px;
+            background-color: #e5e7eb;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .hero-image-placeholder img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Main Content Layout */
+        .main-layout {
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        /* Book List Styles */
+        .book-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .book-card {
+            background-color: var(--bg-card);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.2s, box-shadow 0.2s;
+            border: 1px solid var(--border-color);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .book-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        .book-cover {
+            width: 100%;
+            aspect-ratio: 2/3;
+            background-color: #f3f4f6;
+            position: relative;
+        }
+
+        .book-cover img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .book-info {
+            padding: 1rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .book-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .book-meta {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            margin-bottom: 0.5rem;
+        }
+
+        .book-tags {
+            margin-top: auto;
+            display: flex;
+            gap: 0.25rem;
+            flex-wrap: wrap;
+        }
+
+        .book-tag {
+            font-size: 0.75rem;
+            color: #9ca3af;
+            background-color: var(--secondary-color);
+            padding: 0.1rem 0.4rem;
+            border-radius: 2px;
+        }
+
+        /* Sidebar */
+        .sidebar-section {
+            background-color: var(--bg-card);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            border: 1px solid var(--border-color);
+        }
+
+        .rank-list li {
+            display: flex;
+            align-items: center;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .rank-list li:last-child {
+            border-bottom: none;
+        }
+
+        .rank-num {
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: var(--text-secondary);
+            width: 1.5rem;
+            text-align: center;
+            margin-right: 0.75rem;
+            font-style: italic;
+        }
+
+        .rank-num.top-3 {
+            color: #f59e0b;
+        }
+
+        .rank-title {
+            font-size: 0.95rem;
+            font-weight: 600;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 180px;
+        }
+
+        .rank-update {
+            margin-left: auto;
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+        }
+
+        /* Category Grid */
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+            margin-bottom: 3rem;
+        }
+
+        .category-item {
+            background-color: var(--bg-card);
+            border-radius: 8px;
+            padding: 1.5rem;
+            text-align: center;
+            border: 1px solid var(--border-color);
+            transition: all 0.2s;
+            cursor: pointer;
+        }
+
+        .category-item:hover {
+            border-color: var(--primary-color);
+            color: var(--primary-color);
+        }
+
+        .category-icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .category-name {
+            font-weight: 600;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #111827;
+            color: #d1d5db;
+            padding: 3rem 0;
+            margin-top: auto;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-brand h2 {
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .footer-col h3 {
+            color: white;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-col a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #374151;
+            font-size: 0.875rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-inner {
+                height: 60px;
+            }
+
+            .nav-links {
+                display: none; /* Simplified for mobile */
+            }
+
+            .hero-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-text h1 {
+                font-size: 2rem;
+            }
+
+            .main-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .category-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner flex flex-between">
+            <a href="#" class="logo">17网首页</a>
+            <nav class="nav-links">
+                <a href="#" class="active">首页</a>
+                <a href="#">玄幻</a>
+                <a href="#">都市</a>
+                <a href="#">历史</a>
+                <a href="#">科幻</a>
+                <a href="#">漫画</a>
+            </nav>
+            <div class="header-actions">
+                <div class="search-box">
+                    <svg class="search-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                    </svg>
+                    <input type="text" class="search-input" placeholder="搜索作品...">
+                </div>
+                <a href="#" class="btn btn-primary">登录</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-grid">
+                    <div class="hero-text">
+                        <h1>探索无限精彩的阅读世界</h1>
+                        <p>汇聚全网优质小说与漫画资源，提供沉浸式阅读体验。无论您是寻找热血玄幻、甜蜜言情还是硬核科幻，17网首页都能满足您的阅读需求。</p>
+                        <div class="hero-tags">
+                            <span class="tag">热门连载</span>
+                            <span class="tag">完结佳作</span>
+                            <span class="tag">独家首发</span>
+                        </div>
+                        <div class="flex">
+                            <a href="#" class="btn btn-primary">开始阅读</a>
+                            <a href="#" class="btn btn-outline" style="margin-left: 10px;">投稿专区</a>
+                        </div>
+                    </div>
+                    <div class="hero-image-placeholder">
+                        <!-- Using a generic placeholder representing a book cover art -->
+                        <img src="https://picsum.photos/seed/17web/600/400" alt="热门推荐封面">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Category Navigation -->
+        <section class="container">
+            <div class="category-grid">
+                <div class="category-item">
+                    <div class="category-icon">🐉</div>
+                    <div class="category-name">玄幻仙侠</div>
+                </div>
+                <div class="category-item">
+                    <div class="category-icon">🏙️</div>
+                    <div class="category-name">都市职场</div>
+                </div>
+                <div class="category-item">
+                    <div class="category-icon">⚔️</div>
+                    <div class="category-name">历史军事</div>
+                </div>
+                <div class="category-item">
+                    <div class="category-icon">🚀</div>
+                    <div class="category-name">科幻末世</div>
+                </div>
+                <div class="category-item">
+                    <div class="category-icon">🎀</div>
+                    <div class="category-name">青春校园</div>
+                </div>
+                <div class="category-item">
+                    <div class="category-icon">👻</div>
+                    <div class="category-name">悬疑灵异</div>
+                </div>
+                <div class="category-item">
+                    <div class="category-icon">👑</div>
+                    <div class="category-name">游戏竞技</div>
+                </div>
+                <div class="category-item">
+                    <div class="category-icon">🖼️</div>
+                    <div class="category-name">二次元漫画</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Content Area -->
+        <div class="container main-layout">
+            <!-- Left Column: Content Feed -->
+            <section class="content-area">
+                <h2 class="section-title">今日更新</h2>
+                <div class="book-grid" id="book-list">
+                    <!-- Book Cards will be generated by JS to ensure variety -->
+                </div>
+                <div style="text-align: center; margin-top: 2rem;">
+                    <button class="btn btn-outline" id="load-more">加载更多</button>
+                </div>
+            </section>
+
+            <!-- Right Column: Sidebar -->
+            <aside class="sidebar">
+                <div class="sidebar-section">
+                    <h3 class="section-title">排行榜</h3>
+                    <ul class="rank-list">
+                        <li>
+                            <span class="rank-num top-3">1</span>
+                            <a href="#" class="rank-title">神级反派系统</a>
+                            <span class="rank-update">12万字</span>
+                        </li>
+                        <li>
+                            <span class="rank-num top-3">2</span>
+                            <a href="#" class="rank-title">逆天邪神</a>
+                            <span class="rank-update">832万字</span>
+                        </li>
+                        <li>
+                            <span class="rank-num top-3">3</span>
+                            <a href="#" class="rank-title">完美世界</a>
+                            <span class="rank-update">490万字</span>
+                        </li>
+                        <li>
+                            <span class="rank-num">4</span>
+                            <a href="#" class="rank-title">斗破苍穹</a>
+                            <span class="rank-update">364万字</span>
+                        </li>
+                        <li>
+                            <span class="rank-num">5</span>
+                            <a href="#" class="rank-title">武动乾坤</a>
+                            <span class="rank-update">267万字</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-section">
+                    <h3 class="section-title">热门标签</h3>
+                    <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+                        <a href="#" class="tag">系统流</a>
+                        <a href="#" class="tag">穿越</a>
+                        <a href="#" class="tag">重生</a>
+                        <a href="#" class="tag">赘婿</a>
+                        <a href="#" class="tag">神医</a>
+                        <a href="#" class="tag">女频</a>
+                        <a href="#" class="tag">爽文</a>
+                        <a href="#" class="tag">无敌</a>
+                    </div>
+                </div>
+
+                <div class="sidebar-section">
+                    <h3 class="section-title">阅读工具</h3>
+                    <ul class="rank-list">
+                        <li>
+                            <a href="#" class="rank-title">阅读器设置</a>
+                        </li>
+                        <li>
+                            <a href="#" class="rank-title">字体大小调节</a>
+                        </li>
+                        <li>
+                            <a href="#" class="rank-title">夜间模式</a>
+                        </li>
+                        <li>
+                            <a href="#" class="rank-title">离线下载</a>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h2>17网首页</h2>
+                    <p style="opacity: 0.8; max-width: 300px;">致力于为读者提供最优质的数字阅读体验，涵盖小说、漫画、动漫等多种娱乐内容。我们坚持原创，尊重版权，打造绿色健康的网络阅读环境。</p>
+                </div>
+                <div class="footer-col">
+                    <h3>关于我们</h3>
+                    <ul>
+                        <li><a href="#">网站简介</a></li>
+                        <li><a href="#">加入我们</a></li>
+                        <li><a href="#">联系方式</a></li>
+                        <li><a href="#">版权声明</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>帮助中心</h3>
+                    <ul>
+                        <li><a href="#">用户协议</a></li>
+                        <li><a href="#">隐私政策</a></li>
+                        <li><a href="#">常见问题</a></li>
+                        <li><a href="#">意见反馈</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>关注我们</h3>
+                    <ul>
+                        <li><a href="#">微信公众号</a></li>
+                        <li><a href="#">新浪微博</a></li>
+                        <li><a href="#">QQ群交流</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2023 17网首页 版权所有. 保留所有权利.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Data for generating book cards
+        const bookData = [
+            { title: "大奉打更人", author: "卖报小郎君", tags: ["悬疑", "历史", "神探"], imgSeed: "book1" },
+            { title: "夜的命名术", author: "会说话的肘子", tags: ["科幻", "系统", "重生"], imgSeed: "book2" },
+            { title: "道诡异仙", author: "狐尾的笔", tags: ["克苏鲁", "玄幻", "诡异"], imgSeed: "book3" },
+            { title: "深空彼岸", author: "辰东", tags: ["科幻", "末世", "长生"], imgSeed: "book4" },
+            { title: "我师兄实在太稳健了", author: "言归正传", tags: ["仙侠", "搞笑", "稳健"], imgSeed: "book5" },
+            { title: "宿命之环", author: "爱潜水的乌贼", tags: ["科幻", "蒸汽朋克", "克苏鲁"], imgSeed: "book6" },
+            { title: "大乘期才有逆袭系统", author: "吾道长不孤", tags: ["修真", "系统", "搞笑"], imgSeed: "book7" },
+            { title: "道君", author: "老鹰吃小鸡", tags: ["仙侠", "玄幻", "热血"], imgSeed: "book8" }
+        ];
+
+        const bookListContainer = document.getElementById('book-list');
+        const loadMoreBtn = document.getElementById('load-more');
+
+        // Function to create a book card HTML string
+        function createBookCard(book) {
+            return `
+                <article class="book-card">
+                    <div class="book-cover">
+                        <img src="https://picsum.photos/seed/${book.imgSeed}/200/300" alt="${book.title}封面">
+                    </div>
+                    <div class="book-info">
+                        <h3 class="book-title"><a href="#">${book.title}</a></h3>
+                        <div class="book-meta">作者：${book.author}</div>
+                        <div class="book-tags">
+                            ${book.tags.map(tag => `<span class="book-tag">${tag}</span>`).join('')}
+                        </div>
+                    </div>
+                </article>
+            `;
+        }
+
+        // Initial render
+        function renderBooks() {
+            bookListContainer.innerHTML = bookData.map(book => createBookCard(book)).join('');
+        }
+
+        // Load more simulation
+        loadMoreBtn.addEventListener('click', () => {
+            loadMoreBtn.textContent = '加载中...';
+            loadMoreBtn.disabled = true;
+            
+            setTimeout(() => {
+                // Simulate adding more data
+                const newData = bookData.map(b => ({...b, title: b.title + " (续)" }));
+                const newCardsHtml = newData.map(book => createBookCard(book)).join('');
+                bookListContainer.insertAdjacentHTML('beforeend', newCardsHtml);
+                
+                loadMoreBtn.textContent = '加载更多';
+                loadMoreBtn.disabled = false;
+            }, 800);
+        });
+
+        // Initialize
+        renderBooks();
+    </script>
+</body>
+  </html>
