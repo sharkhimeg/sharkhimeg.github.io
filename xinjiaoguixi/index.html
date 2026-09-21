@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新交规细则-2024最新交通法规解读与安全驾驶指南</title>
+    <meta name="description" content="提供2024年最新《道路交通安全法》实施细则及新交规细则解读。涵盖驾驶证记分、违章处理、电子警察执法、限行政策等核心内容，帮助驾驶员快速了解法规变化，安全文明驾驶。">
+    <meta name="keywords" content="新交规细则,交通法规,驾驶证记分,违章处理,电子眼,交通违章查询">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #e60012; /* 交通红 */
+            --primary-hover: #b3000e;
+            --secondary-color: #2c3e50; /* 深蓝灰 */
+            --bg-light: #f8f9fa;
+            --text-main: #333333;
+            --text-light: #666666;
+            --border-color: #e0e0e0;
+            --shadow-sm: 0 2px 4px rgba(0,0,0,0.05);
+            --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
+            --radius: 8px;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: #fff;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        a:hover {
+            color: var(--primary-color);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* 布局容器 */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* 顶部导航 */
+        header {
+            background-color: #fff;
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--secondary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--primary-color);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--secondary-color);
+        }
+
+        .nav-links a.active {
+            color: var(--primary-color);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        /* Hero 区域 */
+        .hero {
+            background: linear-gradient(135deg, var(--secondary-color) 0%, #1a252f 100%);
+            color: #fff;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 20px;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+
+        .hero-btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 12px 36px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 18px;
+            transition: background 0.3s;
+        }
+
+        .hero-btn:hover {
+            background-color: var(--primary-hover);
+        }
+
+        /* 核心速查区 */
+        .quick-lookup {
+            padding: 40px 0;
+            background-color: var(--bg-light);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 28px;
+            margin-bottom: 40px;
+            color: var(--secondary-color);
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background-color: var(--primary-color);
+            margin: 15px auto 0;
+            border-radius: 2px;
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .info-card {
+            background: #fff;
+            padding: 30px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-sm);
+            border-top: 4px solid var(--primary-color);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .info-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .info-card h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: var(--secondary-color);
+        }
+
+        .info-card p {
+            color: var(--text-light);
+            margin-bottom: 20px;
+        }
+
+        .tag-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .tag {
+            background-color: #ffebee;
+            color: var(--primary-color);
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        /* 重点解读区 */
+        .highlights {
+            padding: 80px 0;
+        }
+
+        .highlight-item {
+            display: flex;
+            gap: 40px;
+            margin-bottom: 60px;
+            align-items: center;
+        }
+
+        .highlight-item:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .highlight-content {
+            flex: 1;
+        }
+
+        .highlight-number {
+            font-size: 60px;
+            font-weight: 800;
+            color: rgba(0,0,0,0.05);
+            line-height: 1;
+            margin-bottom: -20px;
+            display: block;
+        }
+
+        .highlight-content h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: var(--secondary-color);
+        }
+
+        .highlight-content p {
+            font-size: 18px;
+            color: var(--text-light);
+            margin-bottom: 20px;
+        }
+
+        .highlight-list li {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 10px;
+            color: var(--text-main);
+        }
+
+        .highlight-list li::before {
+            content: '•';
+            color: var(--primary-color);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        .highlight-img {
+            flex: 1;
+            background-color: #eee;
+            border-radius: var(--radius);
+            min-height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 14px;
+            background-image: url('https://picsum.photos/seed/traffic1/600/400');
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* 常见问题区 */
+        .faq-section {
+            background-color: var(--bg-light);
+            padding: 80px 0;
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: #fff;
+            margin-bottom: 15px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-sm);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 20px 25px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            font-size: 18px;
+            color: var(--secondary-color);
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 24px;
+            color: var(--primary-color);
+            transition: transform 0.3s;
+        }
+
+        .faq-item.active .faq-question::after {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            padding: 0 25px;
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+
+        .faq-item.active .faq-answer {
+            padding-bottom: 20px;
+            max-height: 300px;
+        }
+
+        /* 页脚 */
+        footer {
+            background-color: var(--secondary-color);
+            color: #bdc3c7;
+            padding: 60px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1.5fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: #fff;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: #fff;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 20px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        /* 响应式 */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background: #fff;
+                flex-direction: column;
+                padding: 20px;
+                box-shadow: var(--shadow-md);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .highlight-item, .highlight-item:nth-child(even) {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .highlight-img {
+                width: 100%;
+                min-height: 200px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <div class="logo">
+                <span>🚦</span> 驾规通
+            </div>
+            <nav class="nav-links" id="navLinks">
+                <a href="#" class="active">首页</a>
+                <a href="#points">记分管理</a>
+                <a href="#violations">违章处理</a>
+                <a href="#policies">限行政策</a>
+                <a href="#faq">常见问题</a>
+            </nav>
+            <div class="mobile-menu-btn" onclick="toggleMenu()">☰</div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1>新交规细则解读</h1>
+                <p>2024年道路交通安全法律法规全面更新，全面解析驾驶证记分制度、电子警察执法标准及各类违章处理流程，助您合规驾驶，安全出行。</p>
+                <a href="#points" class="hero-btn">查看最新扣分标准</a>
+            </div>
+        </section>
+
+        <!-- 核心速查 -->
+        <section class="quick-lookup" id="points">
+            <div class="container">
+                <h2 class="section-title">2024核心变化速览</h2>
+                <div class="card-grid">
+                    <article class="info-card">
+                        <h3>📝 驾驶证记分周期</h3>
+                        <p>一个记分周期为12个月，从驾驶证初次领证之日起计算。周期届满后，记分清零。</p>
+                        <div class="tag-list">
+                            <span class="tag">记分清零</span>
+                            <span class="tag">周期计算</span>
+                        </div>
+                    </article>
+                    <article class="info-card">
+                        <h3>🚦 电子警察执法</h3>
+                        <p>新增非现场执法规范，明确电子监控设备抓拍的证据效力。对遮挡号牌、闯红灯等行为加大处罚力度。</p>
+                        <div class="tag-list">
+                            <span class="tag">非现场执法</span>
+                            <span class="tag">证据效力</span>
+                        </div>
+                    </article>
+                    <article class="info-card">
+                        <h3>🚗 醉驾入刑标准</h3>
+                        <p>血液酒精含量≥80mg/100ml即构成危险驾驶罪。除吊销驾照外，还将面临刑事处罚及五年内不得重新取得驾驶证。</p>
+                        <div class="tag-list">
+                            <span class="tag">危险驾驶</span>
+                            <span class="tag">刑事处罚</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- 重点解读 -->
+        <section class="highlights">
+            <div class="container">
+                <h2 class="section-title">重点条款深度解读</h2>
+                
+                <div class="highlight-item">
+                    <div class="highlight-content">
+                        <span class="highlight-number">01</span>
+                        <h2>严查分心驾驶行为</h2>
+                        <p>新交规细则明确，驾驶时拨打接听手持电话、观看电视等妨碍安全驾驶的行为，将被一次性记3分。</p>
+                        <ul class="highlight-list">
+                            <li><strong>手机使用：</strong>驾驶机动车有拨打、接听手持电话等妨碍安全驾驶行为的，记3分。</li>
+                            <li><strong>抽烟进食：</strong>在驾驶过程中抽烟、吃东西等影响注意力的行为，同样属于违规。</li>
+                            <li><strong>安全建议：</strong>建议使用蓝牙耳机或车载系统，切勿在行车过程中操作手机。</li>
+                        </ul>
+                    </div>
+                    <div class="highlight-img" style="background-image: url('https://picsum.photos/seed/driving/600/400');"></div>
+                </div>
+
+                <div class="highlight-item">
+                    <div class="highlight-content">
+                        <span class="highlight-number">02</span>
+                        <h2>高速公路特殊规定</h2>
+                        <p>针对高速公路通行规则进行了细化，重点规范了应急车道使用、实线变道及低速行驶等行为。</p>
+                        <ul class="highlight-list">
+                            <li><strong>应急车道：</strong>非紧急情况下在高速公路应急车道上行驶的，记6分。</li>
+                            <li><strong>实线变道：</strong>在高速公路上行驶时，不得压实线变道，违者记3分。</li>
+                            <li><strong>低速行驶：</strong>在高速公路上低于最低限速行驶的，记3分。</li>
+                        </ul>
+                    </div>
+                    <div class="highlight-img" style="background-image: url('https://picsum.photos/seed/highway/600/400');"></div>
+                </div>
+
+                <div class="highlight-item">
+                    <div class="highlight-content">
+                        <span class="highlight-number">03</span>
+                        <h2>营运车辆重点监管</h2>
+                        <p>对于出租车、网约车等营运车辆，新规加大了违规行为的处罚力度，重点整治超员、疲劳驾驶。</p>
+                        <ul class="highlight-list">
+                            <li><strong>疲劳驾驶：</strong>驾驶营运机动车超过4小时未停车休息或休息时间少于20分钟的，记12分。</li>
+                            <li><strong>超员载客：</strong>驾驶营运客车超过核定人数20%以上的，一次性记12分。</li>
+                            <li><strong>违规变道：</strong>营运车辆在高速公路行车道上停车上下客的，记12分。</li>
+                        </ul>
+                    </div>
+                    <div class="highlight-img" style="background-image: url('https://picsum.photos/seed/bus/600/400');"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 常见问题 FAQ -->
+        <section class="faq-section" id="faq">
+            <div class="container">
+                <h2 class="section-title">常见问题解答</h2>
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <div class="faq-question">Q1: 驾驶证记分周期是如何计算的？</div>
+                        <div class="faq-answer">
+                            A: 驾驶证记分周期以初次领证日期为准，每12个月为一个记分周期。在一个记分周期内记分未达到12分，且罚款已缴纳的，记分予以清除；记分虽未达到12分，但尚有罚款未缴纳的，记分转入下一记分周期。
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">Q2: 电子眼抓拍违章后多久能查到？</div>
+                        <div class="faq-answer">
+                            A: 一般情况下，电子眼抓拍的违章信息会在3-7个工作日内上传至公安交管系统。部分城市支持实时查询，具体时间取决于当地交管部门的数据处理速度。
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">Q3: 被扣留驾驶证后如何处理？</div>
+                        <div class="faq-answer">
+                            A: 如果因违章被暂扣驾驶证，需携带本人身份证、驾驶证、行驶证及违章处理通知书，前往指定的违法处理窗口接受处理。处理完毕后，按照规定参加学习考试（针对扣12分的情况）并领取驾驶证。
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">Q4: 新交规对电动车有何影响？</div>
+                        <div class="faq-answer">
+                            A: 新交规细则对电动自行车和电动摩托车的分类管理更加严格。未按规定佩戴安全头盔、逆行、闯红灯等行为均会受到处罚。驾驶电动摩托车需考取相应摩托车驾驶证。
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>🚦 驾规通</h4>
+                    <p>致力于为广大驾驶员提供最新、最全的交通法规资讯与违章处理指南。我们承诺信息准确、更新及时，助您安全文明驾驶。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>法规查询</h4>
+                    <ul>
+                        <li><a href="#">道路交通安全法</a></li>
+                        <li><a href="#">机动车驾驶证申领和使用规定</a></li>
+                        <li><a href="#">道路交通安全违法行为记分管理办法</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>实用工具</h4>
+                    <ul>
+                        <li><a href="#">驾照模拟考试</a></li>
+                        <li><a href="#">违章计算器</a></li>
+                        <li><a href="#">导航违章查询</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系我们</h4>
+                    <p>电话：400-123-4567</p>
+                    <p>邮箱：support@jiaoguitong.com</p>
+                    <p>地址：某某市某某区交通法规研究中心</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 驾规通 版权所有 | 仅供参考，具体请以当地交管部门最新规定为准</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 移动端菜单切换
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+
+        // FAQ 手风琴效果
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', event => {
+                const parent = item.parentElement;
+                const isActive = parent.classList.contains('active');
+                
+                // 关闭所有其他打开的FAQ
+                document.querySelectorAll('.faq-item').forEach(child => {
+                    child.classList.remove('active');
+                });
+
+                // 如果当前没有打开，则打开它
+                if (!isActive) {
+                    parent.classList.add('active');
+                }
+            });
+        });
+
+        // 平滑滚动（兼容旧浏览器）
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    // 移动端点击后关闭菜单
+                    document.getElementById('navLinks').classList.remove('active');
+                    
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
